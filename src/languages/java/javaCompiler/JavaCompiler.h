@@ -1,9 +1,8 @@
-#ifndef CPPCOMPILER_H
-#define CPPCOMPILER_H
-
+#ifndef JAVA_COMPILER_H
+#define JAVA_COMPILER_H
 #include "../../../serve/compiler/Compiler.h"
 
-class CppCompiler : public Compiler {
+class JavaCompiler : public Compiler {
 public:
   void compile(std::string filepath);
 };

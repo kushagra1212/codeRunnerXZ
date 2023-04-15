@@ -6,9 +6,12 @@
 
 class FileWatcher {
 public:
-  FileWatcher(std::string filepath, std::unique_ptr<Compiler> compiler,
-              std::unique_ptr<Runner> runner);
+  FileWatcher(std::string filepath);
   void watch();
+  std::string getFileExtension(std::string filepath);
+
+  std::unique_ptr<Compiler> getCompiler(std::string filepath);
+  std::unique_ptr<Runner> getRunner(std::string filepath);
 
 private:
   std::string filepath;

@@ -1,9 +1,9 @@
-#ifndef CPPRUNNER_H
-#define CPPRUNNER_H
+#ifndef JAVA_RUNNER_H
+#define JAVA_RUNNER_H
 
 #include "../../serve/runner/Runner.h"
 
-class CppRunner : public Runner {
+class JavaRunner : public Runner {
 public:
   void run(std::string filepath);
 };

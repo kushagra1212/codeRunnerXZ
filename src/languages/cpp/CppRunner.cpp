@@ -7,9 +7,3 @@ void CppRunner::run(std::string filepath) {
   command = command.substr(2);
   system(command.c_str());
 }
-
-std::string CppRunner::getExecutableName(std::string filepath) {
-  size_t lastDotIndex = filepath.find_last_of(".");
-  std::string executableName = filepath.substr(0, lastDotIndex);
-  return executableName;
-}
