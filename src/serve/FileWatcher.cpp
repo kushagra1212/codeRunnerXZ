@@ -1,10 +1,11 @@
 #include "FileWatcher.h"
 
-FileWatcher::FileWatcher(std::string filepath, Compiler *compiler,
-                         Runner *runner) {
+FileWatcher::FileWatcher(std::string filepath,
+                         std::unique_ptr<Compiler> compiler,
+                         std::unique_ptr<Runner> runner) {
   this->filepath = filepath;
-  this->compiler = compiler;
-  this->runner = runner;
+  this->compiler = std::move(compiler);
+  this->runner = std::move(runner);
   lastModifiedTime = getLastModifiedTime(filepath);
 }
 
