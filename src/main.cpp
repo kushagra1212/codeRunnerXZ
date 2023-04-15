@@ -13,5 +13,5 @@ int main(int argc, char **argv) {
   std::unique_ptr<FileWatcher> fileWatcher(
       new FileWatcher(filepath, std::move(compiler), std::move(runner)));
   fileWatcher->watch();
-  return 0;
+   return 0;
 }
