@@ -9,7 +9,7 @@ SRC=src/languages/cpp/CppRunner.cpp \
 		src/serve/FileWatcher.cpp \
     src/serve/compiler/Compiler.cpp \
     src/serve/runner/Runner.cpp \
-    src/main.cpp
+    src/codeRunnerXZ.cpp
 
 OBJ=obj/languages/cpp/CppRunner.o \
     obj/languages/cpp/cppCompiler/CppCompiler.o \
@@ -18,9 +18,9 @@ OBJ=obj/languages/cpp/CppRunner.o \
 		obj/serve/FileWatcher.o \
     obj/serve/compiler/Compiler.o \
     obj/serve/runner/Runner.o \
-    obj/main.o
+    obj/codeRunnerXZ.o
 
-all: main
+all: codeRunnerXZ
 
 main: $(OBJ)
 	$(CC) $(CFLAGS) $(INC) $(OBJ) -o main
@@ -55,9 +55,9 @@ obj/serve/runner/Runner.o: src/serve/runner/Runner.cpp
 	mkdir -p obj/serve/runner
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
-obj/main.o: src/main.cpp
+obj/codeRunnerXZ.o: src/codeRunnerXZ.cpp
 	mkdir -p obj
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
-	rm -rf obj/* main
+	rm -rf obj/* codeRunnerXZ
