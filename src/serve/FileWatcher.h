@@ -8,7 +8,6 @@ class FileWatcher {
 public:
   FileWatcher(std::string filepath, std::unique_ptr<Compiler> compiler,
               std::unique_ptr<Runner> runner);
-
   void watch();
 
 private:
@@ -16,7 +15,6 @@ private:
   time_t lastModifiedTime;
   std::unique_ptr<Compiler> compiler;
   std::unique_ptr<Runner> runner;
-
   bool isFileModified(std::string filepath);
 
   time_t getLastModifiedTime(std::string filepath);
