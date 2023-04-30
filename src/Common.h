@@ -8,5 +8,4 @@
 #include <string>
 #include <sys/stat.h>
 #include <thread>
-
 #endif // !DEBUG

@@ -45,7 +45,8 @@ void FileWatcher::watch() {
 }
 
 std::string FileWatcher::getFileExtension(std::string filepath) {
-  return filepath.substr(filepath.find_last_of(".") + 1);
+  std::string extWithQuotes = filepath.substr(filepath.find_last_of(".") + 1);
+  return extWithQuotes.substr(0, extWithQuotes.find_last_of("\""));
 }
 
 bool FileWatcher::isFileModified(std::string filepath) {
